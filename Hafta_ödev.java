@@ -83,21 +83,23 @@ programýný yazýnýz.Örneðin; 5, 12, -3 deðerleri için çýktý olarak 12 vermeli.
     
     if (sayi1 > sayi2 && sayi1 > sayi3 ){
         System.out.println(sayi1);
-    }
+    }       
     else if (sayi2 > sayi3 && sayi2 > sayi1){
         System.out.println(sayi2);
     }
-     else {
+    else if (sayi3 > sayi2 && sayi3 > sayi1) {
         System.out.println(sayi3);   
      } 
-     */   
-        
+     else{
+        System.out.println("Bütün sayýlar eþit"); 
+    }   
+    */    
        /* SORU 6) Üç tamsayý arasýndaki en küçük deðeri bulan ve konsola yazdýran JAVA
 programýný yazýnýz.
 
     int sayi1 = 15;
-    int sayi2 = 20;
-    int sayi3 = 25;
+    int sayi2 = 15;
+    int sayi3 = 15;
     
     if (sayi2 < sayi1 && sayi2 <sayi3  ){
         System.out.println(sayi2);
@@ -105,9 +107,12 @@ programýný yazýnýz.
     else if (sayi1 < sayi3 && sayi1 < sayi2){
         System.out.println(sayi1);
     }
-     else {
+    else if (sayi3 < sayi2 && sayi3 < sayi1) {
         System.out.println(sayi3);
      }
+    else {
+        System.out.println("Bütün sayýlar eþit");  
+    }
 */
         
         
@@ -116,22 +121,23 @@ programýný yazýnýz.
         /*SORU 7) Bir öðrencinin vize, ödev ve final notunu kullanarak dönem sonu notunu
 hesaplayan, eðer dönem sonu notu 70 ve üzerindeyse konsola GEÇTÝ, deðilse KALDIyazdýran programý yazýnýz.
 
-  
-    int vize = 95;
-    int final1 = 60;
-    int odev = 100;
-    double bolum = 0.2;
-    double bolum2 = 0.6;
-    double toplam = ((double)vize*bolum) + ((double)final1*bolum2) + ((double)odev*bolum);
+   
+    int vize = 69;
+    int final1 =70;
+    int odev = 71;
+    double bolum = 0.3;
+    double bolum2 = 0.5;
+    double bolum3 = 0.2;
+    double toplam = ((double)vize*bolum) + ((double)final1*bolum2) + ((double)odev*bolum3);
     System.out.println (toplam + " ile");
     
-    if (toplam > 70){
+    if (toplam >= 70){
        System.out.println("GEÇTÝ");
     }
     else {
          System.out.println("KALDI");
     }
-    */  
+     */
         
         
         
@@ -139,7 +145,7 @@ hesaplayan, eðer dönem sonu notu 70 ve üzerindeyse konsola GEÇTÝ, deðilse KALDIy
         
         /*SORU 8) Tanýmlanan genel aðýrlýklý not ortalamasý (GANO) deðeri için aþaðýdaki aralýklara
 göre uygun harf notunu konsola yazdýran programý yazýnýz.
-    double GANO = 2.7;
+    double GANO = 0;
     if (GANO>= 3.5 && GANO <= 4){
         System.out.println("A");
     }
@@ -155,14 +161,14 @@ göre uygun harf notunu konsola yazdýran programý yazýnýz.
     else if (GANO >= 1.5){
          System.out.println("E");
      }
-    else if (GANO >= 1){
+    else if (GANO >= 0){
          System.out.println("F");
      }
     else {
-        System.out.println("Girdiðiniz sayý 1-4 aralýðýnda olmalýdýr.");
+        System.out.println("Girdiðiniz sayý 0-4 aralýðýnda olmalýdýr.");
     }
-
-        */
+*/
+        
         
 
         /*SORU 9) A, B, C, D ve E harf notlarýndan birinin verildiði bir sistemde, öðrencinin harf
@@ -190,13 +196,13 @@ gelmiþtir” veya “Bu ürüne %X indirim yapýlmýþtýr” ya da “Bu ürünün fiyatý deðiþm
     
     int eskiFiyat = 200;
     int yeniFiyat = 200;       
-    double zamÝnd  = ((double)yeniFiyat-eskiFiyat)/eskiFiyat*100;
+    double zamInd  = ((double)yeniFiyat-eskiFiyat)/eskiFiyat*100;
     
-    if (zamÝnd > 0){
-        System.out.println ("Bu ürüne % " + zamÝnd + " zam yapýlmýþtýr.");
+    if (zamInd > 0){
+        System.out.println ("Bu ürüne % " + zamInd + " zam yapýlmýþtýr.");
     }
-    else if (zamÝnd < 0){
-        System.out.println ("Bu ürüne % " + zamÝnd + " indirim yapýlmýþtýr.");
+    else if (zamInd < 0){
+        System.out.println ("Bu ürüne % " + zamInd + " indirim yapýlmýþtýr.");
     }
     else {
         System.out.println ("Bu ürünün fiyatý deðiþmemiþtir.");
@@ -263,18 +269,15 @@ programý yazýnýz.
     double oran1 = 0.2;
     double oran2 = 0.25;
     double oran3 = 0.3;
-    double maas1 = (zamsizMaas*oran1) + zamsizMaas;
-    double maas2 = (zamsizMaas*oran2) + zamsizMaas;
-    double maas3 = (zamsizMaas*oran3) + zamsizMaas;
           
     if (yil <= 5){
-        System.out.println ("Yeni maaþýnýz: " + maas1 );
+        System.out.println ("Yeni maaþýnýz: " + (zamsizMaas*oran1 + zamsizMaas) );
     }
     else if (yil > 5 && yil <= 10){
-        System.out.println ("Yeni maaþýnýz: " + maas2 );
+        System.out.println ("Yeni maaþýnýz: " + (zamsizMaas*oran2 + zamsizMaas ));
     }
     else {
-        System.out.println ("Yeni maaþýnýz: " + maas3 );      
+        System.out.println ("Yeni maaþýnýz: " + (zamsizMaas*oran3 + zamsizMaas) );      
     }
 */
 
@@ -313,7 +316,7 @@ aldýðý kitabý zamanýnda teslim etmeyen bir öðrencinin, gecikme süresine göre öde
 gereken toplam ceza tutarýný hesaplayan programý yazýnýz.
         
     int gecikmeGunu = 30; 
-    double ceza = 0;
+    int ceza = 0;
      
     if (gecikmeGunu <= 7) {
      ceza = gecikmeGunu * 10;
@@ -391,11 +394,17 @@ mý olduðunu kontrol eden programý yazýnýz.
  4, 7, 2 için konsola SIRASIZ yazdýrýlmalý.
 
     int sayi = 15;
-    int sayi1 = 20;
-    int sayi2 = 25;
+    int sayi1 = 15;
+    int sayi2 = 20;
     
     if (sayi > sayi1 && sayi1 > sayi2){
         System.out.println(sayi2 + " , " +sayi1 + " , "+ sayi + "\tARTAN");
+    }
+    else if (sayi == sayi1 && sayi1 > sayi2){
+        System.out.println(sayi2 + " , " +sayi1 + " , "+ sayi + "\tARTAN");  
+    }
+    else if (sayi == sayi1 && sayi2 > sayi1){
+        System.out.println(sayi2 + " , " +sayi1 + " , "+ sayi + "\tAZALAN");
     }
     else if (sayi2 > sayi1 && sayi1 > sayi){
         System.out.println(sayi2 + " , " +sayi1 + " , "+ sayi + "\tAZALAN");
@@ -403,7 +412,7 @@ mý olduðunu kontrol eden programý yazýnýz.
     else{
         System.out.println(sayi + " , " +sayi1 + " , "+ sayi2 + "\tSIRASIZ");
     }
- */
+    */
  
  
  
@@ -433,11 +442,11 @@ programý yazýnýz.
 
     /*SORU 20) Tamsayý olarak tanýmlanan iki deðer ve karakter tipinde tanýmlanan operatöre (+, -
 , *, / veya %) göre, bu iki sayý üzerinde iþlem yapan ve sonucu ekrana yazdýran programý
-yazýnýz.
-    int sayi1 = 15;
+yazýnýz. */
+    int sayi1 = 40;
     int sayi2 = 27;
-    char islem = '%';
-    int sonuc = 0; 
+    char islem = '/';
+    double sonuc = 0; 
     boolean gecerli = true;
     
     if (islem == '*'){
@@ -449,85 +458,29 @@ yazýnýz.
     else if (islem == '-'){
         System.out.println(sayi1 - sayi2);
     }
-   else if (islem == '/') {
-            if (sayi2 != 0) {
-                sonuc = sayi1 / sayi2;
-            } else {
-                System.out.println("Hata: Bir sayý sýfýra bölünemez!");
-                gecerli = false;
+    else if (islem == '/') { 
+        if (sayi2 != 0) {
+                sonuc =(double) sayi1/sayi2;
+        } else {
+        System.out.println("Hata: Bir sayý sýfýra bölünemez!");
+        gecerli = false;
                 }
-        } else if (islem == '%') {
-            if (sayi2 != 0) {
+    } else if (islem == '%') {
+        if (sayi2 != 0) {
                 sonuc = sayi1 % sayi2;
-            } else {
-                System.out.println("Hata: Mod iþlemi için bölen sýfýr olamaz!");
-                gecerli = false;
+    } else {
+        System.out.println("Hata: Mod iþlemi için bölen sýfýr olamaz!");
+        gecerli = false;
             }
         } else {
-            System.out.println("Geçersiz operatör!");
-            gecerli = false;
+        System.out.println("Geçersiz operatör!");
+        gecerli = false;
         }
 
         if (gecerli) {
             System.out.println("Sonuç: " + sonuc);
         }
- */
-            
-    
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    }
+            
+       }
     }
